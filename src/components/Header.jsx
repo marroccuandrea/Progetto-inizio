@@ -1,5 +1,7 @@
 import reactImg from "../assets/react-core-concepts.png";
 const reactDescriptions = ["Foundamental", "Crucial", "Core"];
+// Importo gli stili CSS
+import "./Header.css";
 
 function genRandomVal(max) {
   return Math.floor(Math.random() * (max + 1));
