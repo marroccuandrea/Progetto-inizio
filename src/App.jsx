@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { CORE_CONCEPTS } from "./data.js";
 import { EXAMPLES } from "./data.js";
 import Header from "./components/Header.jsx";
@@ -12,7 +12,8 @@ function App() {
     setSelectedTopic(selectedButton);
   }
   return (
-    <div>
+    // L'elemento div serve per raggruppare i frammenti dell'output, la funzione infatti può renderizzare il tutto solo se incluso in un elemento genitore, un semplice div, che può essere sostiuito da <> </> oppure <Fragment> </Fragment>.
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -64,7 +65,7 @@ function App() {
           )}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
